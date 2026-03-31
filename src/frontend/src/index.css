@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    --background: 0.12 0.04 265;
+    --foreground: 0.98 0 0;
+    --card: 0.18 0.06 265;
+    --card-foreground: 0.98 0 0;
+    --popover: 0.18 0.06 265;
+    --popover-foreground: 0.98 0 0;
+    --primary: 0.68 0.22 38;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.28 0.08 265;
+    --secondary-foreground: 0.98 0 0;
+    --muted: 0.22 0.05 265;
+    --muted-foreground: 0.65 0.04 265;
+    --accent: 0.65 0.22 290;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.6 0.24 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.3 0.07 265;
+    --input: 0.28 0.07 265;
+    --ring: 0.68 0.22 38;
+    --chart-1: 0.68 0.22 38;
+    --chart-2: 0.65 0.22 290;
+    --chart-3: 0.87 0.12 205;
+    --chart-4: 0.72 0.22 145;
+    --chart-5: 0.75 0.2 60;
+    --sidebar: 0.18 0.06 265;
+    --sidebar-foreground: 0.98 0 0;
+    --sidebar-primary: 0.68 0.22 38;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.65 0.22 290;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.3 0.07 265;
+    --sidebar-ring: 0.68 0.22 38;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #0b0f1f;
+    font-family: "Nunito", sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@layer utilities {
+  .text-glow-orange {
+    text-shadow: 0 0 20px rgba(255, 122, 60, 0.8), 0 0 40px
+      rgba(255, 122, 60, 0.4);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 20px rgba(95, 227, 255, 0.8), 0 0 40px
+      rgba(95, 227, 255, 0.4);
+  }
+  .text-glow-purple {
+    text-shadow: 0 0 20px rgba(168, 107, 255, 0.8), 0 0 40px
+      rgba(168, 107, 255, 0.4);
+  }
+  .btn-game {
+    @apply font-bold rounded-2xl py-4 px-8 text-xl text-white transition-all duration-150 active:scale-95 select-none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0
+      rgba(255, 255, 255, 0.2);
+  }
+  .btn-orange {
+    background: linear-gradient(135deg, #ff7a3c, #ffb14a);
+    box-shadow: 0 4px 24px rgba(255, 122, 60, 0.5), inset 0 1px 0
+      rgba(255, 255, 255, 0.25);
+  }
+  .btn-orange:hover {
+    box-shadow: 0 6px 30px rgba(255, 122, 60, 0.7), inset 0 1px 0
+      rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+  }
+  .btn-purple {
+    background: linear-gradient(135deg, #7c4dff, #a86bff);
+    box-shadow: 0 4px 24px rgba(124, 77, 255, 0.5), inset 0 1px 0
+      rgba(255, 255, 255, 0.2);
+  }
+  .btn-cyan {
+    background: linear-gradient(135deg, #17b6ff, #5fe3ff);
+    box-shadow: 0 4px 24px rgba(23, 182, 255, 0.5), inset 0 1px 0
+      rgba(255, 255, 255, 0.2);
+    color: #0b0f1f;
+  }
+  .game-frame {
+    background: linear-gradient(180deg, #1b2150 0%, #0d1130 100%);
+    border: 2px solid rgba(95, 227, 255, 0.3);
+    box-shadow: 0 0 40px rgba(95, 227, 255, 0.15), inset 0 0 40px
+      rgba(0, 0, 0, 0.3);
+  }
+}
